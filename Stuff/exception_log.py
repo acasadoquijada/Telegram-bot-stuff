@@ -28,3 +28,5 @@ def exception_log(e,m):
 # Cause of the exception: /adios
 # Exception: A request to the Telegram API was unsuccessful. The server returned HTTP 400 Bad Request. Response body:
 # [{"ok":false,"error_code":400,"description":"Error: Bad Request: wrong chat id"}]
+
+
