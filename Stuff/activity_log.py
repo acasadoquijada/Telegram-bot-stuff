@@ -9,7 +9,7 @@ def log(m):
     username = m.from_user.username
     hour = time.strftime("%H:%M:%S")
     date = time.strftime("%d/%m/%y")
-    information = "["+ str(date) + ' ' + str(hour) + ' ' +str(user_name)  + ' ' + 
+    information = "["+ str(date) + ' ' + str(hour) + ' ' +str(name)  + ' ' + 
     str(last_name) + ' ' + str(user_id) + ' @' + str(username) + "]: " + m.text 
     
     aux = open( 'log.txt', 'a')
