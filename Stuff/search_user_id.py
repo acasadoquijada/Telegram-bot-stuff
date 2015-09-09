@@ -1,26 +1,24 @@
 ################################################################################
 # search_user_id funciton
 ################################################################################
+
 def search_user_id(user_name):
-    f = open("users-id.txt", "r")
-    users_id = f.read()
-    f.close()
-    usid = 0
-    pos = users_id.find(user_name)
-    if pos != -1:
-        pos1 = users_id.find(" ", pos)
-        pos2 = users_id.find("\n", pos1+1)
-        usid = int(users_id[pos1:pos2])
-        if usid != 0:
-            return usid
-    return pos
-
+    f = open("users-id.csv","rt")
+    readstrk = csv.reader(f)
+    for k in readstrk:
+        USID[k[0]] = k[1]
+    if user_name in USID:
+        return USID[user_name]
+    else:
+        return -1
 
 ################################################################################
-# For this function you need to have a txt file with usernames and its id's
-# users-id.txt should be like
+# For this function you need to have a csv file with usernames and its id's
+# users-id.csv should be like
 ################################################################################
 
-@user1 2514156
-@user2 8482563
-@user3 875314
+# start of file in next line
+@user1,2514156
+@user2,8482563
+@user3,875314
+# end of file
