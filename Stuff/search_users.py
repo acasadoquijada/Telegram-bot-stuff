@@ -3,15 +3,16 @@
 ################################################################################
 
 def search_user(m):
-    pos = m.text.find(" ")
-    text = m.text[pos:]
-    pos1 = text.find("@")
+    txt = m.text
+    pos1 = txt.find("@")
     if pos1 != -1:
-        pos2 = text.find(" ",pos1)
-        user_name = text[pos1:pos2]
+        pos2 = txt.find(" ",pos1)
+        if pos2 == -1:
+            user_name = txt[pos1:]
+        else:
+            user_name = txt[pos1:pos2]
         return user_name
     return -1
-
 
 ################################################################################
 # An example of use can be:
