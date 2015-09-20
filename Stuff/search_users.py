@@ -4,14 +4,15 @@
 
 def search_user(m):
     txt = m.text
-    pos1 = txt.find("@")
-    if pos1 != -1:
-        pos2 = txt.find(" ",pos1)
-        if pos2 == -1:
-            user_name = txt[pos1:]
-        else:
-            user_name = txt[pos1:pos2]
-        return user_name
+    if txt.find(" ") != -1: # any message?
+        pos1 = txt.find("@")
+        if pos1 != -1:
+            pos2 = txt.find(" ",pos1)
+            if pos2 == -1:
+                user_name = txt[pos1+1:] # +1 para quitar @
+            else:
+                user_name = txt[pos1+1:pos2] # +1 para quitar @
+            return user_name
     return -1
 
 ################################################################################
