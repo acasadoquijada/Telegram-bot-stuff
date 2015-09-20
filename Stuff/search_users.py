@@ -9,15 +9,12 @@ def search_user(m):
         if pos1 != -1:
             pos2 = txt.find(" ",pos1)
             if pos2 == -1:
-                user_name = txt[pos1+1:] # +1 para quitar @
+                user_name = txt[pos1+1:] # +1 to ignore @
             else:
-                user_name = txt[pos1+1:pos2] # +1 para quitar @
+                user_name = txt[pos1+1:pos2] # +1 to ignore @
             return user_name
     return -1
 
 ################################################################################
-# An example of use can be:
-# > /say_to @user1 hola
-# this function will return 
-# > @user1
+# This function searches any @username in the message
 ################################################################################

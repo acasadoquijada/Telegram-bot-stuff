@@ -10,14 +10,7 @@ def search_user_id(user_name):
         return -1
 
 ################################################################################
-# For this function you need to have a csv file with usernames and its id's
-# and a dictionary in witch save them (see dict_updater_saver.py).
-# Useridprivs.csv should be like this:
+# This function returns the id of the username id (if the username is in
+# the data basegiven as the argument.
+# (see dict_updater_saver.py for "dict_updater()")
 ################################################################################
-
-# beginning of the file
-"user","id","privileges"
-@user1,103832,0
-@user2,3829453,0
-@user3,8432984,1
-# end of file

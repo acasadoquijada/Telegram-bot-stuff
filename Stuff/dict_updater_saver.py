@@ -11,6 +11,7 @@ def dict_updater():
             # row[2] = privileges
             DBDIC[row[0]] = [row[1], row[2]]
 
+########################################
 
 def dict_saver():
     with open("./files/uidprivs.csv","wb") as f:
